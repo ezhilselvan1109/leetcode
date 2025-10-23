@@ -1,29 +1,8 @@
 package org.example.tree.solution;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Stack;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-
-public class InvertTree {
+class InvertTree {
     public TreeNode breadthFirstSearch(TreeNode root) {
         if (root == null) return null;
         Stack<TreeNode> stack = new Stack<>();
@@ -66,28 +45,8 @@ public class InvertTree {
         }
         return root;
     }
-
-    public static void printLevelOrder(TreeNode root) {
-        if (root == null) {
-            System.out.println("Tree is empty!");
-            return;
-        }
-
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-
-        while (!queue.isEmpty()) {
-            int levelSize = queue.size();
-            for (int i = 0; i < levelSize; i++) {
-                TreeNode node = queue.poll();
-                System.out.print(node.val + " ");
-                if (node.left != null) queue.add(node.left);
-                if (node.right != null) queue.add(node.right);
-            }
-            System.out.println(); // new line for each level
-        }
-    }
-
+}
+public class P1 {
     public static void main(String[] args) {
         // Tree structure:
         //        1
@@ -104,13 +63,16 @@ public class InvertTree {
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
 
-        System.out.println("Before Inversion:");
-        printLevelOrder(root);
-
         InvertTree solution = new InvertTree();
+
+        System.out.println("Before Inversion:");
+        TreeNode.printLevelOrder(root);
+
         solution.depthFirstSearch(root);
+        //solution.breadthFirstSearch(root);
+        //solution.iterativeDFS(root);
 
         System.out.println("\nAfter Inversion:");
-        printLevelOrder(root);
+        TreeNode.printLevelOrder(root);
     }
 }
