@@ -1,5 +1,4 @@
-## 226. Invert Binary Tree
-
+## [226. Invert Binary Tree ](https://leetcode.com/problems/invert-binary-tree/description/)
 Given the root of a binary tree, invert the tree, and return its root.
 
 ### Example 1:
@@ -23,3 +22,4 @@ Output: []
 - -100 <= Node.val <= 100
 
 #### [Code](../solution/InvertTree.java)
+
