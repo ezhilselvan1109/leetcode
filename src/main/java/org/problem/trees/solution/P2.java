@@ -1,4 +1,4 @@
-package org.example.tree.solution;
+package org.problem.trees.solution;
 
 import java.util.LinkedList;
 import java.util.Queue;
