@@ -1,4 +1,4 @@
-### Graph Problems
+### Sliding Window Problems
 
 #### [1. Invert Binary Tree](problem/P1.md)
 

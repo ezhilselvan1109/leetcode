@@ -1,4 +1,4 @@
-### Graph Problems
+### Stack Problems
 
 #### [1. Invert Binary Tree](problem/P1.md)
 
